@@ -1,0 +1,49 @@
+package uda_prog_tp1;
+
+import java.util.Scanner;
+
+public class Uda_Prog_TP1_Ej1 { 
+    Operaciones op=new Operaciones();
+    static boolean salir;
+    static Scanner sc = new Scanner(System.in);
+    public void menu(){
+        int opciones;
+        System.out.println("Ingrese una opcion:");
+        System.out.println("1-Suma");
+        System.out.println("2-resta");
+        System.out.println("3-multiplicacion");
+        System.out.println("4-divicion");
+        System.out.println("5-Salir");
+        opciones = sc.nextInt();
+        switch(opciones){
+            case 1: //suma
+                op.suma();
+                System.out.println("El resultado es:"+op.suma());
+            break;
+            case 2://resta
+                op.resta();
+                System.out.println("El resultado es:"+op.resta());
+            break;
+            case 3: //multiplicacion
+                op.multiplicacion();
+                System.out.println("El resultado es:"+op.multiplicacion());
+                break;
+            case 4:
+                op.divicion();
+                System.out.println("El resultado es:"+op.divicion());
+                break;
+            case 5:
+                salir=true;
+        }
+    }
+    
+    public static void main(String[] args) {
+        do{
+        Uda_Prog_TP1_Ej1 menu = new Uda_Prog_TP1_Ej1();
+        menu.menu();
+
+    }while(salir==false);
+}
+}
+
+
